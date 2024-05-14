@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "axios": "^1.6.8",
+    "json-server": "^1.0.0-alpha.23",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2"
+  },
+  "name": "Flixxit-main-_2(pratya)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
