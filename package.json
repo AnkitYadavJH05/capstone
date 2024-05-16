@@ -5,7 +5,7 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2"
   },
-  "name": "Flixxit-main-_2(pratya)",
+  "name": "Flixxit",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
