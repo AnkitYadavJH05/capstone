@@ -25,10 +25,16 @@ const app = express();
 
 //app.use(cors({ origin: "https://flixxit-2i45.onrender.com" }));
  //app.use(cors({ origin: "http://localhost:3000" }));
-app.use(cors({ origin: "*" }));
+app.use(cors({ 
+  origin: "*",
+  methods: ["POST", "GET"],
+  credentials: true
+ }));
+
+ app.use(express.json())
+ 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 
 app.set("view engine", "pug");
 
