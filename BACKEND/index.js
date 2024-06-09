@@ -65,7 +65,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       //return res.redirect("https://flixxit-2i45.onrender.com/");
-      return res.redirect("http://localhost:3000");
+      return res.redirect("https://backend-capstone-seven.vercel.app/");
     } catch {
       req.send("error");
     }
