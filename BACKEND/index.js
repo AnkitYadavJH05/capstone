@@ -25,11 +25,13 @@ const app = express();
 
 //app.use(cors({ origin: "https://flixxit-2i45.onrender.com" }));
  //app.use(cors({ origin: "http://localhost:3000" }));
-app.use(cors({ 
-  origin: "*",
-  methods: ["POST", "GET"],
-  credentials: true
- }));
+app.use(
+  cors({
+    origin: "https://flixxit-capstone-lilac.vercel.app/",
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
  app.use(express.json())
  
@@ -65,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       //return res.redirect("https://flixxit-2i45.onrender.com/");
-      return res.redirect("https://backend-capstone-seven.vercel.app/");
+      return res.redirect("https://flixxit-capstone-lilac.vercel.app/");
     } catch {
       req.send("error");
     }
