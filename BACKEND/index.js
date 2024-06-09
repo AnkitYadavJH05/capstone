@@ -28,7 +28,7 @@ const app = express();
  //app.use(cors({ origin: "http://localhost:3000" }));
 app.use(
   cors({
-    origin: "https://capstone-puce-eight.vercel.app/",
+    origin: "*",
     methods: ["POST", "GET"],
     credentials: true,
   })
