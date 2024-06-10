@@ -83,13 +83,13 @@ export const login = async (req, res) => {
           if (error) {
             return res.send({
               status: 500,
-              message: "Internal server error from try",
+              message: "try",
             });
           }
         });
     }
   } catch (error) {
-    res.status(500).json({ message: "Internal server error from catch" });
+    res.status(500).json({ message: "catch" });
   }
 };
 
