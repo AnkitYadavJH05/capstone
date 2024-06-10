@@ -9,8 +9,8 @@ const headers = {
 };
 
 const apiService = axios.create({
-//baseURL: "http://localhost:3000/",
-  baseURL: process.env.PORT,
+//baseURL: "http://localhost:3000",
+  baseURL: "https://backend-capstone-seven.vercel.app/",
 
   headers: headers,
 });
