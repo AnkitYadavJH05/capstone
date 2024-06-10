@@ -55,12 +55,12 @@ export const login = async (req, res) => {
           if (isPasswordValid) {
             const accessToken = jwt.sign(
               { userId: user._id },
-              31de42422feb44a7f8b5d950be84af2c089aa80ef4da9acf0184ab179cef10d9,
+              process.env.JWT_SECRET,
               { expiresIn: "1m" }
             );
             const refreshToken = jwt.sign(
               { userId: user._id },
-              803b0c2a925313a7631a5ae175dada8647784048d87106ece16d3b4bd80702c6,
+              process.env.JWT_REFRESHSECRET,
               { expiresIn: "30d" }
             );
             res.send({
