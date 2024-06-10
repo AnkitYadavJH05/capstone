@@ -39,7 +39,7 @@ function Login() {
         toast.success('Login Success');
         setTimeout(()=>{
           window.location.reload()
-        },20000)
+        },2000)
         navigate('/')
       }else if(res.data.status === 403){
           setError(res.data.message)
