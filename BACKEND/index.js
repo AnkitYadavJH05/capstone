@@ -27,7 +27,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://capstone-hjpm-5kvgf49sk-ankityadavjh05s-projects.vercel.app",
+    origin: "https://capstone-hjpm.vercel.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -67,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       
-      return res.redirect("https://capstone-hjpm-5kvgf49sk-ankityadavjh05s-projects.vercel.app");
+      return res.redirect("https://capstone-hjpm.vercel.app");
     } catch {
       req.send("error");
     }
@@ -91,7 +91,7 @@ app.use("/user", tvRouter);
 app.use("/user", watchlistRouter);
 app.use("/user", subscribePlan);
 app.use("/user", historyRouter);
-let port="https://capstone-hjpm-5kvgf49sk-ankityadavjh05s-projects.vercel.app"
+let port="https://capstone-hjpm.vercel.app"
 connection
   .then(() =>
     app.listen(port, () => {
