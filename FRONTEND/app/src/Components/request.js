@@ -1,5 +1,5 @@
-//const url = 'https://flixxit-server-9v89.onrender.com'
- const url = 'http://localhost:3000'
+
+ const url = process.env.PORT,
 
 export const signup = {
     signUpUrl : `/user/signup`,
