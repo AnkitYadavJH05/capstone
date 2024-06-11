@@ -27,7 +27,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://capstone-puce-eight.vercel.app/",
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -67,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       
-      return res.redirect("https://capstone-m52q.vercel.app/");
+      return res.redirect("https://capstone-puce-eight.vercel.app/");
     } catch {
       req.send("error");
     }
