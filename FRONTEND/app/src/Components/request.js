@@ -1,5 +1,5 @@
 
- const url = "https://capstone-m52q.vercel.app/",
+ const url = "https://capstone-m52q.vercel.app",
 
 export const signup = {
     signUpUrl : `/user/signup`,
