@@ -24,8 +24,7 @@ import { config } from "dotenv";
 config()
 const app = express();
 
-//app.use(cors({ origin: "https://flixxit-2i45.onrender.com" }));
- //app.use(cors({ origin: "http://localhost:3000" }));
+
 app.use(
   cors({
     origin: "*",
@@ -67,8 +66,8 @@ app.post("/admin/signup", async (req, res) => {
         role: "admin",
       });
       await user.save();
-      //return res.redirect("https://flixxit-2i45.onrender.com/");
-      return res.redirect("");
+      
+      return res.redirect(process.env.PORT);
     } catch {
       req.send("error");
     }
@@ -96,7 +95,7 @@ app.use("/user", historyRouter);
 connection
   .then(() =>
     app.listen(process.env.PORT, () => {
-      console.log("server listening on port 3000");
+      console.log("server listening on port ");
       console.log("connected to mongoDB");
     })
   )
