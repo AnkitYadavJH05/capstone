@@ -27,7 +27,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://capstone-puce-eight.vercel.app"],
+    origin: ["*"],
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -94,7 +94,7 @@ app.use("/user", historyRouter);
 let port="https://capstone-puce-eight.vercel.app/"
 connection
   .then(() =>
-    app.listen(3001, () => {
+    app.listen(3000, () => {
       console.log("server listening on port ");
       console.log("connected to mongoDB");
     })
