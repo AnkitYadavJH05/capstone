@@ -27,7 +27,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: "*",
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -67,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       
-      return res.redirect("");
+      return res.redirect("https://capstone-hjpm-5kvgf49sk-ankityadavjh05s-projects.vercel.app");
     } catch {
       req.send("error");
     }
@@ -91,10 +91,10 @@ app.use("/user", tvRouter);
 app.use("/user", watchlistRouter);
 app.use("/user", subscribePlan);
 app.use("/user", historyRouter);
-let port="https://capstone-puce-eight.vercel.app/"
+let port="https://capstone-hjpm-5kvgf49sk-ankityadavjh05s-projects.vercel.app"
 connection
   .then(() =>
-    app.listen(3000, () => {
+    app.listen(port, () => {
       console.log("server listening on port ");
       console.log("connected to mongoDB");
     })
