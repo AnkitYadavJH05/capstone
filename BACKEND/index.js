@@ -67,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       
-      return res.redirect("https://capstone-puce-eight.vercel.app/");
+      return res.redirect("");
     } catch {
       req.send("error");
     }
