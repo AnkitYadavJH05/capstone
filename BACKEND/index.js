@@ -94,7 +94,7 @@ app.use("/user", historyRouter);
 
 connection
   .then(() =>
-    app.listen(process.env.PORT, () => {
+    app.listen("https://capstone-m52q.vercel.app/", () => {
       console.log("server listening on port ");
       console.log("connected to mongoDB");
     })
