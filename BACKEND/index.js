@@ -27,7 +27,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://capstone-puce-eight.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
