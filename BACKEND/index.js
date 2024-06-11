@@ -67,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       
-      return res.redirect(process.env.PORT);
+      return res.redirect("https://capstone-m52q.vercel.app/");
     } catch {
       req.send("error");
     }
@@ -91,10 +91,10 @@ app.use("/user", tvRouter);
 app.use("/user", watchlistRouter);
 app.use("/user", subscribePlan);
 app.use("/user", historyRouter);
-
+let port="https://capstone-m52q.vercel.app/"
 connection
   .then(() =>
-    app.listen("https://capstone-m52q.vercel.app/", () => {
+    app.listen(port, () => {
       console.log("server listening on port ");
       console.log("connected to mongoDB");
     })
