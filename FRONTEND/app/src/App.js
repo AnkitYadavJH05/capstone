@@ -50,7 +50,7 @@ function App() {
       if (!accessToken && !refreshToken) {
         setState(false);
       } else {
-        post("/user/authenticate")
+        post("https://capstone-m52q.vercel.app/user/authenticate")
           .then((res) => {
             if (res.data.status === 200) {
               localStorage.setItem("accessToken", res.data.accessToken);
