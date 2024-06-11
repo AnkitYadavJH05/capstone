@@ -10,7 +10,7 @@ const headers = {
 
 const apiService = axios.create({
 
-  baseURL: "https://capstone-m52q.vercel.app/",
+  baseURL: "https://capstone-m52q.vercel.app",
 
   headers: headers,
 });
