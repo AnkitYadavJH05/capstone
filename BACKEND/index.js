@@ -67,7 +67,7 @@ app.post("/admin/signup", async (req, res) => {
       });
       await user.save();
       
-      return res.redirect("https://localhost 3001");
+      return res.redirect("https://localhost 3001/");
     } catch {
       req.send("error");
     }
@@ -94,7 +94,7 @@ app.use("/user", historyRouter);
 let port="https://capstone-m52q.vercel.app/"
 connection
   .then(() =>
-    app.listen(port, () => {
+    app.listen(3001, () => {
       console.log("server listening on port ");
       console.log("connected to mongoDB");
     })
